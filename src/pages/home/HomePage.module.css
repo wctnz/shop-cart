@@ -1,6 +1,5 @@
 img {
   width: 50%;
-  height: 50%;
   margin: auto;
 }
 
@@ -25,6 +24,6 @@ img {
 }
 
 button {
-    width: 150px;
-    margin: auto;
+    width: 100px;
+margin-bottom: 10px;
 }

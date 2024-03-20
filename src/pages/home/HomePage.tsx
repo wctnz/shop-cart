@@ -25,9 +25,11 @@ const HomePage = () => {
                                         <p>Цена: {item.price}</p>
                                         <p>Количество: {item.count}</p>
                                     </div>
+                                    <div>
                                     <button
                                         onClick={() => dispatch(cartSlice.actions.addItem(item))}
                                     >Добавить в корзину</button>
+                                    </div>
                                 </div>
                             </>
                         ))
