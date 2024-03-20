@@ -1,0 +1,36 @@
+.container {
+  height: 10vh;
+  background-color: #e4f2fd;
+}
+
+.content {
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+}
+
+.link {
+  margin: 10px;
+}
+
+.cart {
+  /* display: block; */
+  position: relative;
+}
+
+.cart::before {
+  content: attr(data-count);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  border-radius: 10px;
+  background: #a5cf8a;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
