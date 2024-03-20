@@ -4,18 +4,20 @@ import cl from "./Header.module.css"
 
 const Header = () => {
 
-    const { cart } = useAppSelector(state=> state.cart)
+    const { cart } = useAppSelector(state => state.cart)
 
     return (
         <div className={cl.container}>
             <div className={cl.content}>
-            <div>
-                <Link className={cl.link} to={"/"}>МАГАЗИН</Link>
-            </div>
-            <div>
-                <Link className={cl.link} to={"/"}>ГЛАВНАЯ</Link>
-                <Link className={`${cl.link} ${ cl.cart }`} to={"/cart"} data-count={cart.length}>КОРЗИНА</Link>
-            </div>
+                <div>
+                    <Link className={cl.link} to={"/"}>МАГАЗИН</Link>
+                </div>
+                <div style={{ display: "flex" }}>
+                    <Link className={cl.link} to={"/"}>ГЛАВНАЯ</Link>
+                    <div style={{ display: "flex" }}>
+                        <Link className={`${cl.link} ${cl.cart}`} to={"/cart"}>КОРЗИНА<div className={cart.length ? `${cl.cartAmount}` : `${""}`}>{cart.length ? cart.length : ""}</div></Link>
+                    </div>
+                </div>
             </div>
         </div>
     );
